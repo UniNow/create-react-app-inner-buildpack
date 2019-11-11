@@ -46,6 +46,19 @@ else
 EOF
 fi
 
+#Delete source maps from production build
+if [ -f "build/static/js/main.*.js.map" ]
+then
+  echo '       Deleting `$(ls build/static/js/main.*.js.map)` file'
+  rm build/static/js/main.*.js.map
+if
+
+if [ -f "build/static/css/main.*.css.map" ]
+then
+  echo '       Deleting `$(ls build/static/css/main.*.css.map)` file'
+  rm build/static/css/main.*.css.map
+if
+
 echo '       Enabling runtime environment variables'
 
 cra_dir="$BUILD_DIR/.heroku/create-react-app"
