@@ -50,13 +50,13 @@ ls $BUILD_DIR
 ls $BUILD_DIR/build/static/js
 
 # Delete source maps from production build
-if [ -f "$BUILD_DIR/build/static/js/main.*.js.map" ]
+if [ -d "$BUILD_DIR/build/static/js" ]
 then
   echo '       Deleting `$(ls $BUILD_DIR/build/static/js/main.*.js.map)` file'
   rm $BUILD_DIR/build/static/js/main.*.js.map
 fi
 
-if [ -f "$BUILD_DIR/build/static/css/main.*.css.map" ]
+if [ -d "$BUILD_DIR/build/static/css" ]
 then
   echo '       Deleting `$(ls $BUILD_DIR/build/static/css/main.*.css.map)` file'
   rm $BUILD_DIR/build/static/css/main.*.css.map
