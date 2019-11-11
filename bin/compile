@@ -51,13 +51,13 @@ if [ -f "build/static/js/main.*.js.map" ]
 then
   echo '       Deleting `$(ls build/static/js/main.*.js.map)` file'
   rm build/static/js/main.*.js.map
-if
+fi
 
 if [ -f "build/static/css/main.*.css.map" ]
 then
   echo '       Deleting `$(ls build/static/css/main.*.css.map)` file'
   rm build/static/css/main.*.css.map
-if
+fi
 
 echo '       Enabling runtime environment variables'
 
