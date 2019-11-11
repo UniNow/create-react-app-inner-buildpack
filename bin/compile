@@ -46,7 +46,7 @@ else
 EOF
 fi
 
-#Delete source maps from production build
+# Delete source maps from production build
 if [ -f "build/static/js/main.*.js.map" ]
 then
   echo '       Deleting `$(ls build/static/js/main.*.js.map)` file'
