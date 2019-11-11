@@ -49,6 +49,8 @@ fi
 ls $BUILD_DIR
 ls $BUILD_DIR/build/static/js
 
+export
+
 # Delete source maps from production build
 if [ -d "$BUILD_DIR/build/static/js" ]
 then
