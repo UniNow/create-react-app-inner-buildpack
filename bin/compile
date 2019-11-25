@@ -49,14 +49,14 @@ fi
 # Delete source maps from production build
 if [ -d "$BUILD_DIR/build/static/js" ]
 then
-  echo -e '       Deleting `$(ls $BUILD_DIR/build/static/js/main.*.js.map)` file'
-  rm $BUILD_DIR/build/static/js/main.*.js.map
+  echo -e '       Deleting `$(ls $BUILD_DIR/build/static/js/*.js.map)` file'
+  rm $BUILD_DIR/build/static/js/*.js.map
 fi
 
 if [ -d "$BUILD_DIR/build/static/css" ]
 then
-  echo -e '       Deleting `$(ls $BUILD_DIR/build/static/css/main.*.css.map)` file'
-  rm $BUILD_DIR/build/static/css/main.*.css.map
+  echo -e '       Deleting `$(ls $BUILD_DIR/build/static/css/*.css.map)` file'
+  rm $BUILD_DIR/build/static/css/*.css.map
 fi
 
 echo '       Enabling runtime environment variables'
